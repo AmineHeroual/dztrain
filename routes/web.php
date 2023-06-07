@@ -41,8 +41,8 @@ Route::namespace('Front')->group(function(){
 
 Route::namespace('Admin')->group(function(){
 
-    Route::post('/dashboard/login', [AuthAdminController::class,'login'])->name('admin.login');
-    Route::post('/dashboard/do-login', [AuthAdminController::class,'doLogin'])->name('admin.doLogin');
+    Route::get('/dashboard/login', [AuthAdminController::class,'login'])->name('admin.login');
+    Route::get('/dashboard/do-login', [AuthAdminController::class,'doLogin'])->name('admin.doLogin');
 
     Route::middleware('adminAuth:admin')->group(function(){
         Route::get('/dashboard/logout', [AuthAdminController::class,'logout'])->name('admin.logout');
