@@ -14,7 +14,7 @@
     @include('admin.inc.errors')
     <div class="container d-flex justify-content-center m-5 p-5">
 
-    <form action="{{route('admin.doLogin')}}" method="post">
+    <form action="{{route('admin.doLogin')}}" method="get">
         @csrf
         <div class="form-group">
 
