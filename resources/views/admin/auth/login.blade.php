@@ -16,6 +16,7 @@
 
     <form  method="POST" action="{{route('admin.doLogin')}}">
         @csrf
+        @method('put')
         <div class="form-group">
 
             <div class="mb-3">
